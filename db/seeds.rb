@@ -11,7 +11,6 @@ require "open-uri"
 puts "Cleaning database..."
 
 User.destroy_all
-Car.destroy_all
 
 puts "Creating 5 users..."
 

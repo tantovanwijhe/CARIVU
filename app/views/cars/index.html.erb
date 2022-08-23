@@ -1,4 +1,6 @@
 <h1>Cars Index</h1>
-<% @cars.each do |car| %>
-  <%= render 'shared/card', car: car %>
-<% end %>
+<div class="cards">
+  <% @cars.each do |car| %>
+    <%= render 'shared/card', car: car %>
+  <% end %>
+</div>

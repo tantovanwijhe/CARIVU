@@ -8,6 +8,10 @@
 require 'faker'
 require "open-uri"
 
+puts "Cleaning database..."
+
+User.destroy_all
+
 puts "Creating 5 users..."
 
 15.times do

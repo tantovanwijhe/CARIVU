@@ -4,7 +4,8 @@
   <%= f.input :brand_model %>
   <%= f.input :price %>
   <%= f.input :location %>
-  <%= f.input :category %>
+  <%= f.input :category, collection: Car::CATEGORIES, include_blank: false, include_hidden: false %>
   <%= f.input :description %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>

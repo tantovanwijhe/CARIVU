@@ -6,8 +6,11 @@ ruby "3.1.2"
 # User authentication
 gem "devise"
 
+# Image hosting
+gem "cloudinary"
+
 # We don’t want to share those secret keys on GitHub.
-gem "dotenv-rails", groups: [:development, :test]
+# gem "dotenv-rails", groups: [:development, :test]
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"

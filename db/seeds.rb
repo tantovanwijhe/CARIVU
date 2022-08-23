@@ -26,6 +26,7 @@ end
 
 puts "Creating 5 cars..."
 
+number = 0
 15.times do
   car = Car.new(
     brand_model: Faker::Vehicle.manufacture,
@@ -35,10 +36,11 @@ puts "Creating 5 cars..."
     location: "Amsterdam",
     user: User.all.sample
   )
-  file = URI.open("https://source.unsplash.com/random/1280x720/?car")
-  car.photos.attach(io: file, filename: "car_sample.png", content_type: "image/png")
-  car.save!
 
+  file = URI.open("https://source.unsplash.com/random/1280x720/?car")
+  car.photos.attach(io: file, filename: "car_sample_#{number}.png", content_type: "image/png")
+  car.save!
+  number += 1
   puts car.id
 end
 

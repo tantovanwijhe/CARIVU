@@ -1,1 +1,10 @@
 <h1>Create a new Car</h1>
+
+<%= simple_form_for(@car) do |f| %>
+  <%= f.input :brand_model %>
+  <%= f.input :price %>
+  <%= f.input :location %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>

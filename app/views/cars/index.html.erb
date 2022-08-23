@@ -1,1 +1,10 @@
 <h1>Cars Index</h1>
+
+<% @cars.each do |car| %>
+      <%# <div class="co-12 col-sm-6 col-md-4 mb-3"> %>
+        <%= link_to car_path(car) do %>
+          <%# <div class="card-category" data-aos="zoom-in" > %>
+            <%= car.brand_model %>
+          <%# </div> %>
+        <% end %>
+<% end %>

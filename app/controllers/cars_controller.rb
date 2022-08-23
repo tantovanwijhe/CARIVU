@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
   def index
+    @cars = Car.all
   end
 
   def new
@@ -8,6 +9,7 @@ class CarsController < ApplicationController
 
   def create
     @car = Car.new(car_params)
+    @car.user = current_user
 
     if @car.save
       redirect_to car_path(@car)
@@ -17,7 +19,7 @@ class CarsController < ApplicationController
   end
 
   def show
-    @car = Car.find(params[:id])
+    @cars = Car.find(params[:id])
   end
 
   private

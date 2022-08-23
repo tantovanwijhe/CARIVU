@@ -19,7 +19,7 @@ puts "Creating 5 users..."
     first_name: Faker::Internet.user_name,
     last_name: Faker::Internet.user_name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password
+    password: "password"
   )
   user.save!
 end

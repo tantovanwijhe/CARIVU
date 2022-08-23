@@ -2,6 +2,9 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 350px;
+
+
 }
 
 .card-trip > img {
@@ -14,6 +17,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  align-self: baseline;
 }
 
 .card-trip p {
@@ -21,7 +25,10 @@
   opacity: .7;
   margin: 0;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .card-trip .card-trip-infos {
   padding: 16px;

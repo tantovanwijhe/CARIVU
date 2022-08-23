@@ -1,20 +1,8 @@
-<h1>Cars Index</h1>
-<% @cars.each do |car| %>
-      <%# <div class="co-12 col-sm-6 col-md-4 mb-3"> %>
-        <%= link_to car.brand_model, car_path(car) %>
-          <%# <div class="card-category" data-aos="zoom-in" > %>
-          <% if car.photos.first.present? %>
-            <%= cl_image_tag car.photos.first.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <%= image_tag 'https://res.cloudinary.com/dqicy8yvz/image/upload/v1661251452/sample.jpg', height: 300, width: 400, crop: :fill %>
-          <% end %>
-          <%= car.category %>
-          <%= car.description %>
-          <%= car.category %>
-          <%= car.location %> <br> <br>
-          <%# </div> %>
-<% end %>
-
-<%# <% @car.photos.each do |photo| %><br> %>
-  <%# <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %> %>
-<%# <% end %><br> %>
+<div class="container">
+  <h1>Cars Index</h1>
+  <div class="cards">
+    <% @cars.each do |car| %>
+      <%= render 'shared/card', car: car %>
+    <% end %>
+  </div>
+</div>

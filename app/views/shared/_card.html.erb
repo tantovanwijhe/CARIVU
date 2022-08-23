@@ -1,0 +1,11 @@
+<div class="card-trip">
+  <img src="https://source.unsplash.com/random/?car"/>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= car.brand_model %></h2>
+      <p><%= car.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= car.price %></h2>
+    <%= cl_image_tag car.photos.first, class: "card-trip-user avatar-bordered" %>
+  </div>
+</div>

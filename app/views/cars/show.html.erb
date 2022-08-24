@@ -1,12 +1,11 @@
 <div>
-  <%= link_to "Back to Search results", cars_path %>
-
-  <h2>Your Deal</h2>
-  <h3 class="brand-model"><%= @car.brand_model %></h3>
+  <%= link_to "Back to Search results", cars_path, class: "back-button bg-info p-3 mt-3 d-inline-block" %>
+  <h2 class="mt-3 p-2"><strong>Your Deal</strong></h2>
+  <h3 class="brand-model mt-3"><%= @car.brand_model %></h3>
   <% @car.photos.each do |photo| %><br>
     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %><br>
-  <h4 class="price"><strong> Price:  <%= @car.price %> </strong><br></h4>
+  <h4 class="price mt-3"><strong> Price:  <%= @car.price %> </strong><br></h4>
   <div class="row mb-3">
 
     <div class="col-12 col-lg-8">

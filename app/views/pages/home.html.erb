@@ -4,23 +4,25 @@
     <p><strong> CARIVU </strong> offers the most affordable shared car for a day or weekend away</p>
       <form class="search-form w-100">
         <div class="row p-3 rounded">
-          <div class="col-12 col-lg-6">
-            <%# <label for="floatingInput">Location</label> %>
+          <div class="form-floating col-12 col-lg-6">
+            <label for="floatingInput">Location</label>
             <input type="text" class="form-control mb-2 mb-lg-0" id="floatingInput" placeholder="Location" name="location">
           </div>
 
-          <div class="col-6 col-lg-2">
-            <%# <label for="pickUpInput">Pick-up Date</label> %>
+          <div class="form-floating col-6 col-lg-2">
+            <label for="pickUpInput">Pick-up Date</label>
             <input type="date" class="form-control mb-2 mb-lg-0" placeholder="Test" id="pickUpInput">
           </div>
 
-          <div class="col-6 col-lg-2">
-            <%# <label for="dropOffInput">Drop-off Date</label> %>
+          <div class="form-floating col-6 col-lg-2">
+            <label for="dropOffInput">Drop-off Date</label>
             <input type="date" placeholder="test" class="form-control mb-2 mb-lg-0" id="dropOffInput">
           </div>
 
-          <div class="col-12 col-lg-2">
-            <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Submit</button>
+          <div class="col-12 col-lg-2 h-100 d-flex align-items-center">
+            <div class="w-100">
+              <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100" style="height: 58px">Search</button>
+            </div>
           </div>
         </div>
       </form>

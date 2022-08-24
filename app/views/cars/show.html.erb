@@ -1,8 +1,39 @@
-<h1><%= @car.brand_model %></h1>
+<div >
+<%= link_to "Back to Search results", cars_path %>
+
+<h2>Your Deal</h1>
+<h3 class="brand-model"><%= @car.brand_model %></h1>
 <% @car.photos.each do |photo| %><br>
   <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
 <% end %><br>
-<strong> Price:  <%= @car.price %> </strong><br>
-<small class="text-muted">Description: <%= @car.description %></small>
+<h4 class="price"><strong> Price:  <%= @car.price %> </strong><br></h2>
+  <div class="row mb-3">
+
+    <div class="col-12 col-lg-8">
+      <p><small class="text-muted">Description: <%= @car.description %></small></p>
+    </div>
+
+    <div class="col-12 col-lg-4">
+      <form class="search-form">
+        <div class="row p-3 rounded">
+
+          <div class="form-floating col-6 col-lg-12 mb-lg-2">
+            <label for="pickUpInput">Pick-up Date</label>
+            <input type="date" class="form-control mb-2 mb-lg-0" placeholder="Test" id="pickUpInput">
+          </div>
+
+          <div class="form-floating col-6 col-lg-12 mb-lg-2">
+            <label for="dropOffInput">Drop-off Date</label>
+            <input type="date" placeholder="test" class="form-control mb-2 mb-lg-0" id="dropOffInput">
+          </div>
+
+          <div class="col-12 col-lg-12">
+            <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Rent</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
 <%# <small class="text-right flex-shrink-0"><%= link_to "delete", car_path(car), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{car.brand_model}"}, class: 'text-danger' %>
-<%= link_to "Back to Cars list", cars_path %>
+</div>

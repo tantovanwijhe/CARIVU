@@ -2,7 +2,9 @@
   <h1>Cars Index</h1>
   <div class="cards">
     <% @cars.each do |car| %>
-      <%= render 'shared/card', car: car %>
+      <%= link_to car_path(car) do %>
+        <%= render 'shared/card', car: car %>
+      <% end %>
     <% end %>
   </div>
 </div>

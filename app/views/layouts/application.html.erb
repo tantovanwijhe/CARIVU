@@ -12,10 +12,15 @@
 
   <body>
     <div class="page-container">
-      <div class="navbar-container"><%= render "shared/navbar" %></div>
-      <div class="content-container">
-      <%= yield %></div>
-      <div class="footer-container"><%= render "shared/footer" %></div>
+      <div class="navbar-container">
+        <%= render "shared/navbar" %>
+      </div>
+      <div class="content-container <% unless controller.controller_name == 'pages' && controller.action_name == 'home' %>container<% end %>">
+        <%= yield %>
+      </div>
+      <div class="footer-container">
+        <%= render "shared/footer" %>
+      </div>
     </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

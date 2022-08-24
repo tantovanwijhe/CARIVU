@@ -3,3 +3,9 @@
   align-content: center;
   justify-content: space-between;
 }
+
+.form-floating > label {
+  font-size: small;
+  top: -14px;
+  left: 10px;
+}

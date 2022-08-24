@@ -5,4 +5,7 @@
 <strong> Price:  <%= @car.price %> </strong><br>
 <small class="text-muted">Description: <%= @car.description %></small>
 <%# <small class="text-right flex-shrink-0"><%= link_to "delete", car_path(car), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{car.brand_model}"}, class: 'text-danger' %>
+ <form action="https://airbnb-tantovanwijhe.herokuapp.com/">
+            <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Rent this car</button>
+
 <%= link_to "Back to Cars list", cars_path %>

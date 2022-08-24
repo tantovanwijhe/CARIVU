@@ -10,10 +10,10 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.car = 33
+    @booking.car_id = 30
 
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -22,6 +22,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:car).permit(:start_date, :end_date, :car)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

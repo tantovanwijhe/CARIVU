@@ -1,12 +1,12 @@
-<div >
-<%= link_to "Back to Search results", cars_path %>
+<div>
+  <%= link_to "Back to Search results", cars_path %>
 
-<h2>Your Deal</h1>
-<h3 class="brand-model"><%= @car.brand_model %></h1>
-<% @car.photos.each do |photo| %><br>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-<% end %><br>
-<h4 class="price"><strong> Price:  <%= @car.price %> </strong><br></h2>
+  <h2>Your Deal</h2>
+  <h3 class="brand-model"><%= @car.brand_model %></h3>
+  <% @car.photos.each do |photo| %><br>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %><br>
+  <h4 class="price"><strong> Price:  <%= @car.price %> </strong><br></h4>
   <div class="row mb-3">
 
     <div class="col-12 col-lg-8">
@@ -33,7 +33,8 @@
         </div>
       </form>
     </div>
-
   </div>
-<%# <small class="text-right flex-shrink-0"><%= link_to "delete", car_path(car), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{car.brand_model}"}, class: 'text-danger' %>
+  <%# <form action="https://airbnb-tantovanwijhe.herokuapp.com/">
+    <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Rent this car</button>
+  </form> %>
 </div>

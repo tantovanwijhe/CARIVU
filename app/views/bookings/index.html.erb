@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Bookings Index</h1>
+    <% @bookings.each do |booking| %>
+      <p>Rentor: <%= booking.user.first_name %> <%= booking.user.last_name %></p>
+      <p>Car: <%= booking.car.brand_model %></p>
+      <p>Price per day: €<%= booking.car.price %></p>
+      <p>Renting from: <%= booking.car.user.first_name %> <%= booking.car.user.last_name %></p>
+      <p>Start Date: <%= booking.start_date %></p>
+      <p>End Date: <%= booking.end_date %></p>
+    <% end %>
+</div>

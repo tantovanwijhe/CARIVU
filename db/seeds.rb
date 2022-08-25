@@ -10,11 +10,12 @@ require "open-uri"
 
 puts "Cleaning database..."
 
+Booking.destroy_all
 User.destroy_all
 
-puts "Creating 5 users..."
+puts "Creating 10 users..."
 
-15.times do
+10.times do
   user = User.new(
     first_name: Faker::Internet.user_name,
     last_name: Faker::Internet.user_name,
@@ -22,26 +23,6 @@ puts "Creating 5 users..."
     password: "password"
   )
   user.save!
-end
-
-puts "Creating 5 cars..."
-
-number = 0
-15.times do
-  car = Car.new(
-    brand_model: Faker::Vehicle.manufacture,
-    price: rand(1..100),
-    category: Car::CATEGORIES.sample,
-    description: Faker::Vehicle.standard_specs,
-    location: "Amsterdam",
-    user: User.all.sample
-  )
-
-  file = URI.open("https://source.unsplash.com/random/1280x720/?car")
-  car.photos.attach(io: file, filename: "car_sample_#{number}.png", content_type: "image/png")
-  car.save!
-  number += 1
-  puts car.id
 end
 
 puts "Finished!"

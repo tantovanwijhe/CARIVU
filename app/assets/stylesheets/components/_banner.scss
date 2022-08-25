@@ -2,11 +2,12 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  height: 520px;
 
  h1 {
   margin: 0;
-  color: rgb(213, 197, 197);
-  text-shadow: 1px 1px 3px rgb(255, 244, 244);
+  color: rgb(201, 209, 48);
+  // text-shadow: 1px 1px 3px rgb(255, 244, 244);
   font-size: 32px;
   font-weight: bold;
  }
@@ -16,8 +17,10 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgb(255, 255, 255);
+  margin-top: 12px;
+  margin-bottom: 12px;
  }
 
- 
+
 
 }

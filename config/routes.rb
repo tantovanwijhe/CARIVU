@@ -3,8 +3,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :cars, only: %i[index new create show]
   resources :bookings
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "users/:id", to: "users#show", as: :user
 end

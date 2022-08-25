@@ -1,26 +1,28 @@
 <div class="banner position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t3.ftcdn.net/jpg/04/60/44/42/360_F_460444211_E7j3njYE705Rk1guKz9LKh58gFgiTybV.jpg);">
   <div class="container">
-    <h1>Cars</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-      <form class="search-form w-100">
+    <h1>Rent a car in your neighborhood</h1>
+    <p><strong> CARIVU </strong> offers the most affordable shared car for a day or weekend away</p>
+      <form class="search-form w-100" action="https://airbnb-tantovanwijhe.herokuapp.com/cars">
         <div class="row p-3 rounded">
-          <div class="col-12 col-lg-6">
-            <%# <label for="floatingInput">Location</label> %>
+          <div class="form-floating col-12 col-lg-6">
+            <label for="floatingInput">Location</label>
             <input type="text" class="form-control mb-2 mb-lg-0" id="floatingInput" placeholder="Location" name="location">
           </div>
 
-          <div class="col-6 col-lg-2">
-            <%# <label for="pickUpInput">Pick-up Date</label> %>
+          <div class="form-floating col-6 col-lg-2">
+            <label for="pickUpInput">Pick-up Date</label>
             <input type="date" class="form-control mb-2 mb-lg-0" placeholder="Test" id="pickUpInput">
           </div>
 
-          <div class="col-6 col-lg-2">
-            <%# <label for="dropOffInput">Drop-off Date</label> %>
+          <div class="form-floating col-6 col-lg-2">
+            <label for="dropOffInput">Drop-off Date</label>
             <input type="date" placeholder="test" class="form-control mb-2 mb-lg-0" id="dropOffInput">
           </div>
 
-          <div class="col-12 col-lg-2">
-            <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Submit</button>
+          <div class="col-12 col-lg-2 h-100 d-flex align-items-center">
+            <div class="w-100">
+              <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100" style="height: 58px">Search</button>
+            </div>
           </div>
         </div>
       </form>

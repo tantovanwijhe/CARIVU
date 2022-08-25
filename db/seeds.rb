@@ -13,9 +13,9 @@ puts "Cleaning database..."
 Booking.destroy_all
 User.destroy_all
 
-puts "Creating 15 users..."
+puts "Creating 10 users..."
 
-15.times do
+10.times do
   user = User.new(
     first_name: Faker::Internet.user_name,
     last_name: Faker::Internet.user_name,

@@ -1,20 +1,25 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %></h1>
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <th scope="row">E-mail</th>
-            <td><%= @user.email%></td>
-          </tr>
-          <tr>
-            <th scope="row">Photo</th>
-            <td><img src = <%= @user.photo%> ></td>
-          </tr>
-          <tr>
-            <th scope="row">Cars</th>
-            <td>Chevrolet</td>
-          </tr>
-        </tbody>
-      </table>
+
+
+  <h2 class="mt-3 p-2 uppercase"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h2>
+  <p class="brand-model margin-20">One place to manage your account and profile </p>
+  <div class="cards">
+    <img class="avatar-superlarge" <%= cl_image_tag current_user.photo.key %>
+    <div class ="trip-infos"><h3 class="mt-3">First Name</h3><%= current_user.first_name%>
+    <h3 class="mt-3">Last Name</h3><%= current_user.last_name%>
+    <h3 class="mt-3">E-mail</h3><%= current_user.email%></div>
+    </div><tr>
+    <h2 class="brand-model mt-3">
+    Your Car<% if current_user.cars.length > 1 %>s </h2></tr>
+    <% end %>
+          <div class="cards">
+            <% current_user.cars.each do |car| %>
+              <%= link_to car_path(car) do %>
+                <%= render 'shared/card', car: car %>
+              <% end %>
+            <% end %>
+          </div>
+      <h3 class="brand-model mt-3"> Your Bookings </h3>
+    </div>
+  </div>
+</div>

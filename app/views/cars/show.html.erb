@@ -12,7 +12,10 @@
       <p><small class="text-muted">Description: <%= @car.description %></small></p>
     </div>
 
-    <div class="col-12 col-lg-4">
+    <% if @car.user == current_user%>
+    <div class="col-12 col-lg-4" style= “display: none”>
+    <% else %>
+     <div class="col-12 col-lg-4" style= “display: none”>
       <form class="search-form">
         <div class="row p-3 rounded">
 
@@ -36,4 +39,11 @@
   <%# <form action="https://airbnb-tantovanwijhe.herokuapp.com/">
     <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Rent this car</button>
   </form> %>
+  <% end %>
 </div>
+
+
+<% if @car.user == current_user%>
+  <%= link_to "Edit this car", edit_car_path %>
+  <%= link_to "Delete", car_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<% end %>

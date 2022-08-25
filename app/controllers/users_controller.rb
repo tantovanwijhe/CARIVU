@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
-  def index
-    @user = User.all
-  end
-
   def show
-    @user = User.find(params[:id])
+   #@usercar = @user.cars
+   @usercars = current_user.cars
   end
 end

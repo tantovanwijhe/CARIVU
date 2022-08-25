@@ -1,6 +1,6 @@
 class Car < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   has_many_attached :photos
 
   geocoded_by :location
@@ -10,5 +10,6 @@ class Car < ApplicationRecord
 
   validates :brand_model, presence: true
   validates :price, :location, :description, presence: true
-  validates :category, inclusion: { in: CATEGORIES }
+  validates :category, inclusion: { in: CATEGORIES }, presence: true
+  validates :photos, presence: true
 end

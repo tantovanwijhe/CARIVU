@@ -10,11 +10,12 @@ require "open-uri"
 
 puts "Cleaning database..."
 
+Booking.destroy_all
 User.destroy_all
 
-puts "Creating 5 users..."
+puts "Creating 10 users..."
 
-15.times do
+10.times do
   user = User.new(
     first_name: Faker::Internet.user_name,
     last_name: Faker::Internet.user_name,
@@ -24,16 +25,26 @@ puts "Creating 5 users..."
   user.save!
 end
 
-puts "Creating 5 cars..."
+puts "Creating 1 test user..."
+
+User.new(
+  first_name: "John",
+  last_name: "Appleseed",
+  email: "test@test.com",
+  password: "password"
+)
+user.save!
+
+puts "Creating 5 Faker cars..."
 
 number = 0
-15.times do
+5.times do
   car = Car.new(
-    brand_model: Faker::Vehicle.manufacture,
-    price: rand(1..100),
+    brand_model: Faker::Vehicle.make_and_model,
+    price: rand(1..50),
     category: Car::CATEGORIES.sample,
-    description: Faker::Vehicle.standard_specs,
-    location: "Amsterdam",
+    description: Faker::Vehicle.standard_specs.join,
+    location: "28 Stadionplein, Amsterdam",
     user: User.all.sample
   )
 

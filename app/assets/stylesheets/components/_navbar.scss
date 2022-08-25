@@ -1,12 +1,35 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #d8d4d4;
+  // background: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  transition: 0.5s background-color ease;
 }
+#logo {
+  font-weight: lighter;
+  font-family: 'Staatliches', cursive;
+  color: #bae8e8;
 
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon {
+
+}
+
+.navbar-lewagon-black {
+  background-color: #272643;
+}
+
+.nav-link {
+  color: #bae8e8;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
 }

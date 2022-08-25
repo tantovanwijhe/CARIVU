@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   has_many :cars, dependent: :destroy
-  has_many :bookings, dependent: :destroy
+  has_many :bookings
   has_one_attached :photo
   
 

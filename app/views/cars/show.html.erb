@@ -12,28 +12,26 @@
       <p><small class="text-muted">Description: <%= @car.description %></small></p>
     </div>
 
-    <% if @car.user == current_user%>
+  <% if @car.user == current_user%>
     <div class="col-12 col-lg-4" style= “display: none”>
-    <% else %>
-     <div class="col-12 col-lg-4" style= “display: none”>
-      <form class="search-form">
+  <% else %>
+    <div class="col-12 col-lg-4">
+      <%= simple_form_for [@car, @booking] do |f| %>
         <div class="row p-3 rounded">
 
           <div class="form-floating col-6 col-lg-12 mb-lg-2">
-            <label for="pickUpInput">Pick-up Date</label>
-            <input type="date" class="form-control mb-2 mb-lg-0" placeholder="Test" id="pickUpInput">
+              <%= f.input :start_date, html5: true, class: "form-control mb-2 mb-lg-0"%>
           </div>
 
           <div class="form-floating col-6 col-lg-12 mb-lg-2">
-            <label for="dropOffInput">Drop-off Date</label>
-            <input type="date" placeholder="test" class="form-control mb-2 mb-lg-0" id="dropOffInput">
+              <%= f.input :end_date, html5: true, class: "form-control mb-2 mb-lg-0" %>
           </div>
 
           <div class="col-12 col-lg-12">
-            <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100">Rent</button>
+            <%= f.submit "Make booking", class: "btn btn-primary mb-2 mb-lg-0 w-100" %>
           </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
   <%# <form action="https://airbnb-tantovanwijhe.herokuapp.com/">

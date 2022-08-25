@@ -1,31 +1,47 @@
-<div class="banner position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://t3.ftcdn.net/jpg/04/60/44/42/360_F_460444211_E7j3njYE705Rk1guKz9LKh58gFgiTybV.jpg);">
-  <div class="container">
-    <h1>Rent a car in your neighborhood</h1>
-    <p><strong> CARIVU </strong> offers the most affordable shared car for a day or weekend away</p>
-      <form class="search-form w-100" action="https://airbnb-tantovanwijhe.herokuapp.com/cars">
-        <div class="row p-3 rounded">
-          <div class="form-floating col-12 col-lg-6">
-            <label for="floatingInput">Location</label>
-            <input type="text" class="form-control mb-2 mb-lg-0" id="floatingInput" placeholder="Location" name="location">
-          </div>
+<div class="banner">
+  <div class="banner-content container d-flex flex-column justify-content-center">
+    <h2>Find your vehicle..</h2>
+    <form class="search-form w-120" action="/cars">
+      <div class="row p-3 rounded">
+        <div class="form-floating col-12 col-lg-6">
+          <label for="floatingInput">Location</label>
+          <input type="text" class="form-control mb-2 mb-lg-0" id="floatingInput" placeholder="Location" name="location">
+        </div>
 
-          <div class="form-floating col-6 col-lg-2">
-            <label for="pickUpInput">Pick-up Date</label>
-            <input type="date" class="form-control mb-2 mb-lg-0" placeholder="Test" id="pickUpInput">
-          </div>
+        <div class="form-floating col-6 col-lg-2">
+          <label for="pickUpInput">Pick-up Date</label>
+          <input type="date" class="form-control mb-2 mb-lg-0" placeholder="Test" id="pickUpInput">
+        </div>
 
-          <div class="form-floating col-6 col-lg-2">
-            <label for="dropOffInput">Drop-off Date</label>
-            <input type="date" placeholder="test" class="form-control mb-2 mb-lg-0" id="dropOffInput">
-          </div>
+        <div class="form-floating col-6 col-lg-2">
+          <label for="dropOffInput">Drop-off Date</label>
+          <input type="date" placeholder="test" class="form-control mb-2 mb-lg-0" id="dropOffInput">
+        </div>
 
-          <div class="col-12 col-lg-2 h-100 d-flex align-items-center">
-            <div class="w-100">
-              <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100" style="height: 58px">Search</button>
-            </div>
+        <div class="col-12 col-lg-2 h-100 d-flex align-items-center">
+          <div class="w-100">
+            <button type="submit" class="btn btn-primary mb-2 mb-lg-0 w-100" style="height: 58px">Search</button>
           </div>
         </div>
-      </form>
-    <%# <a class="btn btn-flat banner-button" href="#">here for location</a> %>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="ccc">
+  <div class="main-cards">
+    <h2>Premium fleet</h2>
+    <p>Feel like a VIP anywhere you go with our cars</p>
+  </div>
+
+
+  <div class="main-cards">
+    <h2>Fully digital</h2>
+    <p>Skip long lines at the counter</p>
+  </div>
+
+  <div class="main-cards">
+    <h2>105+ countries</h2>
+    <p>Renting cars globally, with a safe security system</p>
   </div>
 </div>

@@ -2,25 +2,36 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 520px;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), asset-url('driver.jpeg');
 
- h1 {
-  margin: 0;
-  color: rgb(201, 209, 48);
-  // text-shadow: 1px 1px 3px rgb(255, 244, 244);
-  font-size: 32px;
-  font-weight: bold;
- }
+  h1 {
+    margin: 0;
+    color: #F0E100;
+    // text-shadow: 1px 1px 3px rgb(255, 244, 244);
+    font-size: 42px;
+    font-weight: bold;
+  }
 
- p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgb(255, 255, 255);
-  margin-top: 12px;
-  margin-bottom: 12px;
- }
+  h2 {
+    font-size: 27px;
+    color: #FFFDFD;
+    opacity: .8;
+    // text-shadow: 1px 1px 3px rgb(255, 255, 255);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-weight: lighter;
+    font-family: 'Source Code Pro', monospace;
+  }
 
+  h5 {
+    color: #FFFDFD;
+    opacity: .8;
+    font-weight: lighter;
+  }
 
-
+  .banner-content {
+    height: 100%;
+    padding-top: 400px;
+  }
 }

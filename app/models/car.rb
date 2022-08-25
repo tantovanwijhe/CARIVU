@@ -9,6 +9,6 @@ class Car < ApplicationRecord
   CATEGORIES = ["Trucks", "Vans", "Exotic & Luxury", "Convertibles", "Sport", "Classics", "Minivans", "SUVs", "Electric vehicles"]
 
   validates :brand_model, presence: true
-  validates :price, presence: true
+  validates :price, :location, :description, presence: true
   validates :category, inclusion: { in: CATEGORIES }
 end

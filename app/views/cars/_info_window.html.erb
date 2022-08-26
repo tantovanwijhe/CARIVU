@@ -1,5 +1,10 @@
-<div class="container">
-<img src="https://c8.alamy.com/comp/P2DN7H/location-vector-icon-isolated-on-transparent-background-location-logo-concept-P2DN7H.jpg" alt="" class="img-thumbnail">
-<h2><%= car.brand_model %></h2>
-<p><%= car.location %></p>
+<div class="container d-inline-flex border">
+  <div class="col-6 col-lg-6 h-20 pt-2">
+    <h2 class="text-start text-uppercase fs-6 fw-normal"><%= car.brand_model %></h2>
+    <p class="text-start fs-6 fw-lighter"><%= car.location %></p>
+    <p class="text-end fs-5 fw-bolder px-1"><%= car.price %></p>
+  </div>
+  <div class="col-6 col-lg-6 p-1">
+    <img src="https://c8.alamy.com/comp/P2DN7H/location-vector-icon-isolated-on-transparent-background-location-logo-concept-P2DN7H.jpg" alt="" class="img-thumbnail">
+  </div>
 </div>

@@ -34,7 +34,8 @@
  </div><tr>
     <h2 class="brand-model mt-3">
   <div class="custom-container">
-      Your Car<% if current_user.cars.length > 1 %>s </h2></tr>
+      Your Car</h2>
+      <% if current_user.cars.length > 1 %>s </tr>
       <% end %>
         <div class="cards" >
           <% current_user.cars.each do |car| %>
@@ -51,9 +52,8 @@
   </div>
 
 
-  <h2 class="brand-model mt-3"> <div class="custom-container">
-
-    Your Rental<% if current_user.cars.length > 1 %>s </h2></tr>
+  <h2 class="brand-model mt-3"> <div class="custom-container">Your Rental</h2>
+  <% if current_user.cars.length > 1 %>s </tr>
     <% end %>
     <div class="cards">
       <% @last=Booking.all %>

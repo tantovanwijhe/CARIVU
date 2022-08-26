@@ -51,7 +51,7 @@
   </div>
 
 
-<h2 class="brand-model mt-3"> <div class="custom-container">
+  <h2 class="brand-model mt-3"> <div class="custom-container">
 
     Your Rental<% if current_user.cars.length > 1 %>s </h2></tr>
     <% end %>
@@ -59,20 +59,19 @@
       <% @last=Booking.all %>
         <% @last.each do |l| %>
           <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"><%= l.car.brand_model %></h5>
-
-                From <p class="card-text"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+            <div class="card-body">
+              <h5 class="card-title"><%= l.car.brand_model %></h5>
+                <p class="card-text">From:
+                <br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
                 <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
                 <%=l.start_date %> to <%=l.end_date %> </p>
               <%= cl_image_tag l.car.photos.first.key, style:"width:100%" %>
-               <button class="btn btn-primary" style="width:100%"> <%= link_to car_path(l.car) do %> View car </a>
-              <% end %>
+                <a><button class="btn btn-primary" style="width:100%"> <%= link_to car_path(l.car) do %> View car </a>
+                <% end %>
             </div>
           </div>
         <% end %>
-      </div>
     </div>
-
 </div>

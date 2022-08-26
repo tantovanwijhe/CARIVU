@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" data-navbar-target="banner">
   <div class="banner-content container d-flex flex-column justify-content-center">
     <h2>Find your vehicle..</h2>
     <form class="search-form w-120" action="/cars">
@@ -28,20 +28,41 @@
   </div>
 </div>
 
-<div class="ccc">
-  <div class="main-cards">
-    <h2>Premium fleet</h2>
-    <p>Feel like a VIP anywhere you go with our cars</p>
+<div class="cards">
+
+  <div class="main-card d-flex">
+    <div class="icon mx-3">
+      <i class="fa-solid fa-face-smile-beam"></i>
+    </div>
+    <div class="cardtext">
+      <h2>Premium fleet</h2>
+      <p>Feel like a VIP with our special cars collection!</p>
+    </div>
   </div>
 
+  <div class="main-card d-flex">
+    <div class="icon mx-3">
+      <i class="fa-solid fa-earth-africa"></i>
+    </div>
 
-  <div class="main-cards">
-    <h2>Fully digital</h2>
-    <p>Skip long lines at the counter</p>
+    <div class="cardtext">
+      <h2>Fully digital</h2>
+      <p>Skip long lines at the counter</p>
+    </div>
   </div>
 
-  <div class="main-cards">
-    <h2>105+ countries</h2>
-    <p>Renting cars globally, with a safe security system</p>
+  <div class="main-card d-flex">
+    <div class="icon mx-3">
+      <i class="fa-solid fa-people-arrows"></i>
+    </div>
+
+    <div class="cardtext">
+      <h2>105+ countries</h2>
+      <p>User to user, with a safe security system</p>
+    </div>
   </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <%= image_tag "map.png" %>
 </div>

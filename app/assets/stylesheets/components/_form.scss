@@ -26,20 +26,37 @@
   color: #2c698d;
   border-color: #bae8e8;
 }
-.main-cards {
+.main-card {
   margin: 50px;
   padding: 10px;
   border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
 }
 .form-control {
   color: #606060;
 }
-.ccc {
+.cards {
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   position: relative;
+  color: #979797;
+  font-size: 18px;
 
 }
-.map {}
+.map-image {
+  width: 250px;
+  margin: 20px;
+}
+.icon {
+  color: #2c698d;
+}
+
+.fa-solid {
+  font-size: 100px;
+  color: #bae8e8;
+}
+.cards h2 {
+  color: #2c698d;
+}

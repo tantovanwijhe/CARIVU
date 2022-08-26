@@ -22,14 +22,14 @@
   </head>
 
   <body>
-    <div class="page-container">
+    <div class="page-container" data-controller="navbar"  >
       <div class="navbar-container">
         <%= render "shared/navbar" %>
       </div>
       <div class="content-container mb-4 <% unless controller.controller_name == 'pages' && controller.action_name == 'home' %>container<% end %>">
         <%= yield %>
       </div>
-      <div class="footer-container">
+      <div class="footer-container" >
         <%= render "shared/footer" %>
       </div>
     </div>

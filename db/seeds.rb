@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 require "open-uri"
 
@@ -13,9 +6,9 @@ puts "Cleaning database..."
 Booking.destroy_all
 User.destroy_all
 
-puts "Creating 10 users..."
+puts "Creating 5 Faker users..."
 
-10.times do
+5.times do
   user = User.new(
     first_name: Faker::Internet.user_name,
     last_name: Faker::Internet.user_name,
@@ -27,24 +20,28 @@ end
 
 puts "Creating 1 test user..."
 
-User.new(
+test = User.new(
   first_name: "John",
   last_name: "Appleseed",
   email: "test@test.com",
   password: "password"
 )
-user.save!
 
-puts "Creating 5 Faker cars..."
+test.save!
 
+puts "Creating 9 Faker cars..."
+sample_locations = ["28 Stadionplein, Amsterdam", "108 Westlandgracht, Amsterdam",
+                    "100 Kajuit, Groningen", "104 Oldenoord, Rotterdam",
+                    "86 Feldmannweg, Delft", "151 Van Woustraat, Amsterdam", "83 Da Costakade, Utrecht",
+                    "14 Fockema Andreaepad, Rotterdam"]
 number = 0
-5.times do
+9.times do
   car = Car.new(
     brand_model: Faker::Vehicle.make_and_model,
-    price: rand(1..50),
+    price: rand(20..100),
     category: Car::CATEGORIES.sample,
-    description: Faker::Vehicle.standard_specs.join,
-    location: "28 Stadionplein, Amsterdam",
+    description: Faker::Vehicle.standard_specs.join(', '),
+    location: sample_locations.sample,
     user: User.all.sample
   )
 

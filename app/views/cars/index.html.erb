@@ -1,8 +1,8 @@
-<div class="container">
-  <h3 class="text-center my-5">Your search results</h3>
+<div class="container m-2">
+  <h3 class="mt-5 mb-4 text-start"> <strong><%="#{@cars.count} Cars available "%></strong> </h3>
   <div class="row">
-    <div class="col-12 col-lg-4">
-      <div id='map' class="mb-3" style='width: 100%; height: 250px;' data-controller="map"
+    <div class="col-12 col-lg-12">
+      <div id='map' class="mb-5" style='width: 100%; height: 250px;' data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
@@ -21,17 +21,15 @@
           map.setFog({}); // Set the default atmosphere style
       });
       </script>
-    </div>
-    <div class="col-12 col-lg-8">
-      <div class="cards">
-        <% @cars.each do |car| %>
-          <%= link_to car_path(car) do %>
-            <%= render 'shared/card', car: car %>
+    </div class="">
+      <div class="col-12 col-lg-12">
+        <div class="cards">
+          <% @cars.each do |car| %>
+            <%= link_to car_path(car) do %>
+              <%= render 'shared/card', car: car %>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
-    </div>
   </div>
 </div>
-
-

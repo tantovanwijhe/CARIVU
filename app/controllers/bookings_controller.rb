@@ -3,14 +3,19 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.car = Car.find(params[:car_id])
     @booking.user = current_user
-
     if @booking.save
       redirect_to root_path
       # Ines please change this^^
-    else
+     else
       render :new, status: :unprocessable_entity
     end
   end
+
+  def show
+    @lastbook = Booking.last
+    
+  end
+
 
   private
 

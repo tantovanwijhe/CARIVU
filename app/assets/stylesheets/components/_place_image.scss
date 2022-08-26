@@ -1,0 +1,45 @@
+.placecontainer {
+  position: relative;
+  width: 50%;
+}
+
+.placeimage {
+  opacity: 0.3;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding: 40px;
+}
+
+.placemiddle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.placecontainer:hover .image {
+  opacity: 0.3;
+}
+
+.placecontainer:hover .middle {
+  opacity: 1;
+}
+
+.placetext {
+  background-color: #04AA6D;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+.custom-container {
+  padding: 50px;
+}

@@ -1,5 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top"
-      data-controller="navbar"
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= "navbar-lewagon-black" unless "#{controller_name} #{action_name}" == "pages home" %>"
+      data-navbar-target="navbar"
       data-action="scroll@window->navbar#updateNavbar"
 >
   <div class="container-fluid">
